@@ -4,7 +4,7 @@ namespace williamcruzme\FCM;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Device extends Model
+class FcmDevice extends Model
 {
     /**
      * The attributes that are mass assignable.

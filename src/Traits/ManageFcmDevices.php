@@ -2,15 +2,17 @@
 
 namespace williamcruzme\FCM\Traits;
 
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-trait ManageDevices
+trait ManageFcmDevices
 {
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     * @param Request $request
+     * @return JsonResponse
      */
     public function store(Request $request)
     {
@@ -30,8 +32,8 @@ trait ManageDevices
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     * @param Request $request
+     * @return JsonResponse
      */
     public function destroy(Request $request)
     {
@@ -80,7 +82,7 @@ trait ManageDevices
      * Get the response for a successful storing devices.
      *
      * @param  array  $response
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     protected function sendResponse($response)
     {
@@ -90,7 +92,7 @@ trait ManageDevices
     /**
      * Get the guard to be used during device management.
      *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     * @return StatefulGuard
      */
     protected function guard()
     {

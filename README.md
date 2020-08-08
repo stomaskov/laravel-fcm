@@ -115,13 +115,13 @@ In your `App\User` model add the `HasDevices` trait:
 
 namespace App;
 
-use williamcruzme\FCM\Traits\HasDevices;
+use williamcruzme\FCM\Traits\HasFcmDevices;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasDevices, Notifiable;
+    use HasFcmDevices, Notifiable;
 }
 ```
 
@@ -308,11 +308,11 @@ The `createRules` `deleteRules` `validationErrorMessages` methods in the `Device
 
 namespace App\Http\Controllers;
 
-use williamcruzme\FCM\Traits\ManageDevices;
+use williamcruzme\FCM\Traits\ManageFcmDevices;
 
 class DeviceController extends Controller {
 
-    use ManageDevices;
+    use ManageFcmDevices;
     
     /**
      * Get the validation rules that apply to the create a device.
@@ -359,11 +359,11 @@ The `guard` method in the `DeviceController` allows you override the default gua
 
 namespace App\Http\Controllers;
 
-use williamcruzme\FCM\Traits\ManageDevices;
+use williamcruzme\FCM\Traits\ManageFcmDevices;
 
 class DeviceController extends Controller {
 
-    use ManageDevices;
+    use ManageFcmDevices;
     
     /**
      * Get the guard to be used during device management.

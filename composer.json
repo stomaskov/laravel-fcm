@@ -29,7 +29,7 @@
         "williamcruzme\\FCM\\FCMServiceProvider"
       ],
       "aliases": {
-        "Device": "williamcruzme\\FCM\\Facades\\Device"
+        "Device": "FcmDevice"
       }
     }
   },

@@ -18,7 +18,7 @@ class FcmChannel
     /**
      * The HTTP client instance.
      *
-     * @var \GuzzleHttp\Client
+     * @var HttpClient
      */
     protected $http;
 
@@ -32,7 +32,7 @@ class FcmChannel
     /**
      * Create a new FCM channel instance.
      *
-     * @param  \GuzzleHttp\Client  $http
+     * @param HttpClient $http
      * @param  string  $apiKey
      * @return void
      */
@@ -46,7 +46,7 @@ class FcmChannel
      * Send the given notification.
      *
      * @param  mixed  $notifiable
-     * @param  \Illuminate\Notifications\Notification  $notification
+     * @param Notification $notification
      * @return void
      */
     public function send($notifiable, Notification $notification)
