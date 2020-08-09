@@ -64,7 +64,7 @@ trait ManageFcmDevices
     protected function deleteRules()
     {
         return [
-            'token' => ['required', 'string', 'exists:devices,token'],
+            'token' => ['required', 'string', 'exists:fcm_devices,token'],
         ];
     }
 
